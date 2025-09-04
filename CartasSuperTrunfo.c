@@ -1,22 +1,95 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Definição das variáveis para cada atributo das cartas.
+
+    char estado1;                                  // Variável do atributo estado da primeira carta
+    char estado2;                                  // Variável do atributo estado da segunda carta.
+    char codigo1[20];                              // Variável do atributo código da primeira carta
+    char codigo2[20];                              // Variável do atributo código da segunda carta.
+    char nome_cidade1[20];                         // Variável do atributo nome da cidade da primeira carta.
+    char nome_cidade2[20];                         // Variável do atributo nome da cidade da segunda carta.
+    int populacao1;                                // Variável do atributo população da primeira carta.
+    int populacao2;                                // Variavel do atributo população da segunda carta.
+    float area1;                                   // Variável do atributo área em km² da primeira carta.
+    float area2;                                   // Variavel do atributo área em km² da segunda carta.
+    double pib1;                                    // Variável do atributo PIB da primeira carta.
+    double pib2;                                    // Váriavel do atributo PIB da segunda carta.
+    int pontos_turisticos1;                        // Variável do atributo pontos turísticos da primeira carta.
+    int pontos_turisticos2;                        // Variável do atributo pontos turísticos da segunda carta.
+
+    // Cadastro das cartas:
+    // Pimeira carta.
+    // Funções printf e scanf para o cadastro de cada atributo da primeira carta.
+
+    printf("Vamos começar! Digite uma letra de representação para a primeira carta (de 'A' a 'H'): \n");
+    scanf(" %c", &estado1);
+
+    printf("Vamos criar o código da carta! Digite a letra do seu estado e em seguida digite um número de 01 a 04 (ex: A01, B03): \n");
+    scanf("%s", codigo1);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", nome_cidade1);
+
+    printf("Digite a população da cidade: \n");
+    scanf("%d", &populacao1);
+
+    printf("Digite a aréa em km² de sua cidade: \n");
+    scanf("%f", &area1);
+
+    printf("Digite o PIB (em reais, ex: 5000000000): \n");
+    scanf("%lf", &pib1);
+
+    printf("Digite o número de pontos turísticos da cidade: \n");
+    scanf("%d", &pontos_turisticos1);
+
+    // Segunda carta.
+    // Funções printf e scanf para o cadastro de cada atributo da segunda segunda carta.
+
+    printf("Certo, agora vamos para a segunda carta. Digite uma letra de representação (De 'A' a 'H'): \n");
+    scanf(" %c", &estado2);
+
+    printf("Digite seu código: \n");
+    scanf("%s", codigo2);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", nome_cidade2);
+
+    printf("Digite a população da cidade: \n");
+    scanf("%d", &populacao2);
+
+    printf("Digite a área em km² de sua cidade: \n");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB (em reais, ex: 5000000000): \n");
+    scanf("%lf", &pib2);
+
+    printf("Digite o número de pontos turísticos da cidade: \n");
+    scanf("%d", &pontos_turisticos2);
+
+    // Exibição dos dados das cartas:
+    // Funções printf para exibir os dados cadastrados da primeira carta.
+
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da cidade: %s\n", nome_cidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f\n", area1);
+    printf("PIB: %.0lf\n", pib1);
+    printf("Número de Pontos Turísticos: %d", pontos_turisticos1);
+
+    // Funções printf para exibir os dados cadastrados da segunda carta.
+
+    printf("\n\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome_cidade2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f\n", area2);
+    printf("PIB: %.0lf\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
 
     return 0;
+
 }
